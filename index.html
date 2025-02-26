@@ -3,135 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自我介紹</title>
-    <style>
-        /* 主要背景設定 */
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            background: linear-gradient(135deg, #c03236, #b54c2f, #524b49, #ffdde1);
-            background-size: 400% 400%;
-            animation: gradientAnimation 10s ease infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        /* 背景動畫 */
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* 卡片設計 */
-        .container {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            max-width: 420px;
-            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        /* 懸停時的立體感 */
-        .container:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        /* 標題樣式 */
-        h1 {
-            color: #fff;
-            font-size: 30px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        /* 文字樣式 */
-        p {
-            color: #150718;
-            font-size: 16px;
-            margin: 10px 0;
-            font-weight: 300;
-            font-weight: bold;
-        }
-
-        /* 重點強調文字 */
-        span {
-            font-weight: bold;
-            color: #02170a;
-        }
-
-        /* 響應式設計 */
-        @media (max-width: 600px) {
-            .container {
-                width: 90%;
-                padding: 20px;
-            }
-        }
-        .name {
-          color: #190aed;
-          font-weight: bold;
-          font-style: italic;
-        }
-
-        .hobby1 {
-              color: #abe81b;
-              font-style: italic;
-          }
-
-        .hobby2 {
-              color: #abe81b;
-              font-style: italic;
-          }
-
-        .mbti {
-              color: #0acdf0;
-              font-size: 18px;
-              font-style: italic;
-          }
-
-        .job {
-              color: #2708f4;
-              font-weight: bold;
-              font-style: italic;
-          }
-
-        .hometown {
-              color: #07f9ac;
-              text-transform: uppercase;
-              font-style: italic;
-          }
-
-        .favorites {
-              color: #6dcc2e;
-              letter-spacing: 1px;
-              font-style: italic;
-          }
-
-        .goals {
-              color: #10edcc;
-              font-weight: 900;
-              font-style: italic;
-          }
-    </style>
+    <title>個人簡介卡片</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>嗨，我是徐璽恩</h1>
-        <p>英文名叫 <span class="name">Michael</span></p>
-        <p>興趣是 <span class="hobby1">健身</span> 跟 <span class="hobby2">彈吉他</span></p>
-        <p>MBTI 是 <span class="mbti">ENFP</span></p>
-        <p>職業：<span class="job">弱弱的電機碩士生</span></p>
-        <p>來自：<span class="hometown">苗栗頭份</span></p>
-        <p>最喜歡的電影：<span class="favorites">魷魚遊戲</span></p>
-        <p>夢想或目標：<span class="goals">把身材練好擁有"腹肌"</span></p>
-
+    <div class="card-container">
+        <div class="card">
+            <img src="profile.jpg" alt="個人照片" class="profile-image">
+            <h1 class="name">徐璽恩 Michael</h1>
+            <p class="description">嗨！我是電機系的碩士生，熱愛健身與彈吉他。我的 MBTI 是 ENFP，夢想是擁有腹肌！</p>
+            <p class="info"><strong class="info2">職業：</strong>弱弱的電機碩士生</p>
+            <p class="info"><strong class="info2">來自：</strong>苗栗頭份</p>
+            <p class="info"><strong class="info2">最喜歡的電影：</strong>魷魚遊戲</p>
+        </div>
     </div>
 </body>
 </html>
