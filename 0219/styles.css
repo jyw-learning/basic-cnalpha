@@ -1,0 +1,82 @@
+/* 背景樣式 */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #c03236, #b54c2f, #524b49, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 背景動畫 */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 卡片樣式 */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 個人照片樣式 */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 70%;
+    border: 3px solid saddlebrown;
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+
+/* 文字樣式 */
+.name {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info {
+    font-size: 14px;
+    color: #444;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.info2{
+    font-size: 14px;
+    color: #444;
+    margin: 5px 0;
+    font-style:oblique;
+    font-weight: bold;
+}

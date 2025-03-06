@@ -1,0 +1,155 @@
+/* 背景樣式 */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #c03236, #b54c2f, #524b49, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* 背景動畫 */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 卡片樣式 */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* 個人照片樣式 */
+.profile-image, .card-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid saddlebrown;
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover, .card-image:hover {
+    transform: scale(1.1);
+}
+
+/* 文字樣式 */
+.name {
+    font-family: 'Georgia', serif;
+    font-size: 38px;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.info {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.info2 {
+    font-size: 16px;
+    color: #222;
+    font-weight: bold;
+}
+
+/* 額外區塊樣式 */
+.section-title {
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+
+
+.icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.info svg {
+    width: 20px; /* 調整圖示大小 */
+    height: 20px;
+    vertical-align: middle; /* 讓圖示與文字對齊 */
+    margin-right: 0px; /* 與文字保持適當距離 */
+    fill: #E4405F; /* 設定 Instagram 標準顏色，可根據需要修改 */
+}
+
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    .profile-image, .card-image {
+        width: 200px;
+        height: 200px;
+    }
+    .name {
+        font-size: 32px;
+    }
+    .description, .info {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image, .card-image {
+        width: 180px;
+        height: 180px;
+    }
+    .name {
+        font-size: 28px;
+    }
+    .description, .info {
+        font-size: 14px;
+    }
+}
